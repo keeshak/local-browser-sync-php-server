@@ -2,21 +2,26 @@ const browserSync = require('browser-sync');
 const gulp = require('gulp');
 const gulpConnectPhp = require('gulp-connect-php');
 
-gulp.task('php', function () {
+function php() {
     gulpConnectPhp.server({
-        port: 8080,
-        keepalive: true
+        keepalive: true,
+        port: 8080
     });
-});
+}
 
-gulp.task('sync', function () {
+function reload(done) {
+    browserSync.reload();
+    done();
+}
+
+function sync() {
     browserSync.init({
         proxy: 'localhost:8080'
     });
-});
+}
 
-gulp.task('watch', function () {
-    gulp.watch('**/*.php', browserSync.reload);
-});
+function watch() {
+    gulp.watch('**/*.php', reload);
+}
 
-gulp.task('default', ['php', 'sync', 'watch']);
+exports.default = gulp.parallel(php, sync, watch);
