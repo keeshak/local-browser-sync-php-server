@@ -1,7 +1,7 @@
 {
     "name": "local-browser-sync-php-server",
     "version": "1.0.0",
-    "description": "Local BrowserSync PHP server",
+    "description": "Local PHP server with BrowserSync",
     "author": "Kees Hak",
     "license": "WTFPL",
     "devDependencies": {
