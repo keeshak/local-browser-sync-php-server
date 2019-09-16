@@ -1,5 +1,5 @@
-# gulp-browser-sync-php-server
-Local Gulp PHP server with BrowserSync.
+# local-browser-sync-php-server
+Local PHP server with BrowserSync.
 
 ## Requirements
 Node.js  
