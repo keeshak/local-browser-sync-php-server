@@ -1,16 +1,16 @@
 # gulp-browser-sync-php-server
 Gulp BrowserSync PHP server.
 
-# Requirements
+## Requirements
 Node.js  
 PHP 5.4.0
 
-# Install
+## Install
 ```
 $ npm install
 ```
 
-# Usage
+## Usage
 ```
 $ npx gulp
 ```
