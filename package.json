@@ -1,0 +1,12 @@
+{
+    "name": "gulp-browser-sync-php-server",
+    "version": "1.0.0",
+    "description": "Gulp BrowserSync PHP server",
+    "author": "Kees Hak",
+    "license": "WTFPL",
+    "devDependencies": {
+        "browser-sync": "^2.26.7",
+        "gulp": "^3.9.1",
+        "gulp-connect-php": "^1.0.3"
+    }
+}
