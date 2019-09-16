@@ -2,16 +2,16 @@ const browserSync = require('browser-sync');
 const gulp = require('gulp');
 const gulpConnectPhp = require('gulp-connect-php');
 
-function php() {
+function php(done) {
+    browserSync.reload();
+    done();
+}
+
+function server() {
     gulpConnectPhp.server({
         keepalive: true,
         port: 8080
     });
-}
-
-function reload(done) {
-    browserSync.reload();
-    done();
 }
 
 function sync() {
@@ -21,7 +21,7 @@ function sync() {
 }
 
 function watch() {
-    gulp.watch('**/*.php', reload);
+    gulp.watch('**/*.php', php);
 }
 
-exports.default = gulp.parallel(php, sync, watch);
+exports.default = gulp.parallel(server, sync, watch);
